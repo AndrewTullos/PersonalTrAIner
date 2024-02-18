@@ -1,8 +1,6 @@
-// Assuming you're using StarsCanvas in a page like pages/index.js
 import dynamic from 'next/dynamic'
 import React from 'react'
 
-// Dynamically import the StarsCanvas component with SSR disabled
 const StarsCanvasWithNoSSR = dynamic(
   () => import('../components/StarBackground'),
   {
@@ -11,14 +9,13 @@ const StarsCanvasWithNoSSR = dynamic(
 )
 
 import { RootLayout } from '@/components/RootLayout'
-// import StarsCanvas from '../components/StarBackground'
 
 import '@/styles/tailwind.css'
 
 export const metadata = {
   title: {
-    template: '%s - Studio',
-    default: 'Studio - Award winning developer studio based in Denmark',
+    template: 'Tr-AI-ner',
+    default: 'Artificial Inteligent Atheletic Trainer',
   },
 }
 

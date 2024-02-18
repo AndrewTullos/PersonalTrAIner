@@ -91,7 +91,7 @@ function Header({
                 'h-6 w-6',
                 invert
                   ? 'fill-white group-hover:fill-neutral-200'
-                  : 'fill-neutral-950 group-hover:fill-neutral-700',
+                  : 'fill-neutral-200 group-hover:fill-neutral-500',
               )}
             />
           </button>
@@ -238,7 +238,8 @@ function RootLayoutInner({ children }) {
       <motion.div
         layout
         style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
-        className="relative flex flex-auto overflow-hidden bg-white pt-14"
+        // className bg-white gives the set white background
+        className="relative flex flex-auto overflow-hidden pt-14"
       >
         <motion.div
           layout

@@ -43,15 +43,15 @@ function Navigation() {
       <ul role="list" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
         {navigation.map((section, sectionIndex) => (
           <li key={sectionIndex}>
-            <div className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+            <div className="font-display text-sm font-semibold tracking-wider text-neutral-50">
               {section.title}
             </div>
-            <ul role="list" className="mt-4 text-sm text-neutral-700">
+            <ul role="list" className="mt-4 text-sm text-neutral-200">
               {section.links.map((link, linkIndex) => (
                 <li key={linkIndex} className="mt-4">
                   <Link
                     href={link.href}
-                    className="transition hover:text-neutral-950"
+                    className="transition hover:text-neutral-500"
                   >
                     {link.title}
                   </Link>
@@ -124,7 +124,7 @@ export function Footer() {
           <Link href="/" aria-label="Home">
             <Logo className="h-8" fillOnHover />
           </Link>
-          <p className="text-sm text-neutral-700">
+          <p className="text-sm text-neutral-500">
             © Studio Agency Inc. {new Date().getFullYear()}
           </p>
         </div>

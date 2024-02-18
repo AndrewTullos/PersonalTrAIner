@@ -27,7 +27,7 @@ function PageLink({ page }) {
         position="left"
         className="relative flex flex-col items-start pl-8"
       >
-        <h3 className="mt-6 text-base font-semibold text-neutral-950">
+        <h3 className="mt-6 text-base font-semibold text-neutral-50">
           {page.title}
         </h3>
         <time

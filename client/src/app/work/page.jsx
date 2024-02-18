@@ -57,7 +57,7 @@ function CaseStudies({ caseStudies }) {
                   </div>
                 </div>
                 <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
-                  <p className="font-display text-4xl font-medium text-neutral-950">
+                  <p className="font-display text-4xl font-medium text-neutral-50">
                     <Link href={caseStudy.href}>{caseStudy.title}</Link>
                   </p>
                   <div className="mt-6 space-y-6 text-base text-neutral-600">
