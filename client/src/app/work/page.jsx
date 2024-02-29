@@ -149,7 +149,7 @@ export default async function Work() {
         <p>
           We believe in efficiency and maximizing our resources to provide the
           best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          the same five meal plans we’ve been developing for the past decade.
         </p>
       </PageIntro>
 
@@ -159,7 +159,7 @@ export default async function Work() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
       >
-        We approached <em>Studio</em> because we loved their past work. They
+        We approached <em>trAIner</em> because we loved their past work. They
         delivered something remarkably similar in record time.
       </Testimonial>
 

@@ -77,7 +77,7 @@ function CaseStudies({ caseStudies }) {
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {caseStudies.map((caseStudy) => (
             <FadeIn key={caseStudy.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 hover:text-neutral-800 sm:p-8">
                 <h3>
                   <Link href={caseStudy.href}>
                     <span className="absolute inset-0 rounded-3xl" />
@@ -141,24 +141,28 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+            <ListItem title="Workout Programs">
+              With TrAIner, users can access custom workout programs designed to
+              maximize their fitness results and optimize their training
+              sessions. Whether you're a beginner or a seasoned athlete, TrAIner
+              ensures every workout is tailored to your fitness level and
+              objectives
             </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title="Skilled Engineering">
+              We boast a team of proficient developers well-versed in
+              cutting-edge technologies, guaranteeing the delivery of accurate
+              information.
             </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+            <ListItem title="Artificial Intelligence">
+              We are at the forefront of AI development. Which mainly means we
+              are letting OpenAI do all the leg work and tieing in this website
+              to their API.
             </ListItem>
-            <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title="Custom Plans">
+              TrAIner empowers users to achieve their fitness goals with
+              personalized diet plans tailored to their unique needs and
+              preferences. Say goodbye to generic meal plans and hello to a
+              healthier, happier you with TrAIner
             </ListItem>
           </List>
         </div>
@@ -169,7 +173,7 @@ function Services() {
 
 export const metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'trAIner is an AI-powered workout and diet tool designed to create personalized programs tailored to individual fitness goals.',
 }
 
 export default async function Home() {
@@ -180,12 +184,12 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-50 [text-wrap:balance] sm:text-7xl">
-            Award-winning development studio based in Denmark.
+            Artificial-intelligence, developed to help you live your best life.
           </h1>
           <p className="mt-6 text-xl text-neutral-200">
-            We are a development studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs.
+            At the intersection of design and technology. We are building a
+            better future with artificial inteligence bringing access to custom
+            tailored health to the masses.
           </p>
         </FadeIn>
       </Container>
@@ -198,9 +202,7 @@ export default async function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Phobia', logo: logoPhobiaDark }}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
+        trAIner helped us and our clients get real working results.
       </Testimonial>
 
       <Services />

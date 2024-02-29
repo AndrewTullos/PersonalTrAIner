@@ -195,16 +195,18 @@ export default async function About() {
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
+            trAIner was founded by a group of fitness enthusiasts who recognized
+            the exorbitant costs of personal trainers and nutritionists.
+            Committed to revolutionizing the industry, trAIner offers premium
+            personalized fitness and diet plans at a fraction of the traditional
+            cost.
           </p>
           <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+            At trAIner, our team is not just a workforce; we're a tight-knit
+            community dedicated to supporting one another. While we offer
+            competitive compensation, we value dedication and encourage our team
+            members to fully immerse themselves in their work, fostering an
+            environment of collaboration and growth
           </p>
         </div>
       </PageIntro>
