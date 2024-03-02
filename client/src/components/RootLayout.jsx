@@ -15,6 +15,7 @@ import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import { GetStarted } from '@/components/GetStarted'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
 import { Logo, Logomark } from '@/components/Logo'
@@ -71,8 +72,8 @@ function Header({
           />
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href="/contact" invert={invert}>
-            Contact us
+          <Button href="/getstarted" invert={invert}>
+            Get Started
           </Button>
           <button
             ref={toggleRef}

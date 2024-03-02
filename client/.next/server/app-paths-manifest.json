@@ -1,7 +1,4 @@
 {
-  "/contact/page": "app/contact/page.js",
-  "/work/unseal/page": "app/work/unseal/page.js",
-  "/work/family-fund/page": "app/work/family-fund/page.js",
-  "/work/page": "app/work/page.js",
-  "/page": "app/page.js"
+  "/getstarted/page": "app/getstarted/page.js",
+  "/contact/page": "app/contact/page.js"
 }
