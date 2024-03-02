@@ -74,7 +74,35 @@ function CaseStudies({ caseStudies }) {
         </p>
       </SectionIntro>
       <Container className="mt-16">
-        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <FadeInStagger className="grid grid-cols-1 gap-8 text-neutral-200 lg:grid-cols-3">
+          <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 hover:text-neutral-800 sm:p-8">
+            <p className="mt-6 font-display text-2xl font-semibold ">
+              <h3>Step One</h3>
+            </p>
+            <p className="mt-4 text-base">Click on the "Get Started</p>
+          </article>
+
+          <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 hover:text-neutral-800 sm:p-8">
+            <p className="mt-6 font-display text-2xl font-semibold ">
+              <h3>Step Two</h3>
+            </p>
+            <p className="mt-4 text-base ">
+              Fill out all the data on the form and click submit.
+            </p>
+          </article>
+
+          <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 hover:text-neutral-800 sm:p-8">
+            <p className="mt-6 font-display text-2xl font-semibold ">
+              <h3>Step Three</h3>
+            </p>
+            <p className="mt-4 text-base ">
+              Wait for the data to populate and download your custom workout &
+              nutrition plan!
+            </p>
+          </article>
+        </FadeInStagger>
+
+        {/* <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {caseStudies.map((caseStudy) => (
             <FadeIn key={caseStudy.href} className="flex">
               <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 hover:text-neutral-800 sm:p-8">
@@ -89,28 +117,15 @@ function CaseStudies({ caseStudies }) {
                     />
                   </Link>
                 </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-200">
-                  <time
-                    dateTime={caseStudy.date.split('-')[0]}
-                    className="font-semibold"
-                  >
-                    {caseStudy.date.split('-')[0]}
-                  </time>
-                  <span className="text-neutral-300" aria-hidden="true">
-                    /
-                  </span>
-                  <span>Case study</span>
-                </p>
+                <p className="mt-6 flex gap-x-2 text-sm text-neutral-200"></p>
                 <p className="mt-6 font-display text-2xl font-semibold text-neutral-200">
-                  {caseStudy.title}
+                  <h3>Step One</h3>
                 </p>
-                <p className="mt-4 text-base text-neutral-200">
-                  {caseStudy.description}
-                </p>
+                <p className="mt-4 text-base text-neutral-200"></p>
               </article>
             </FadeIn>
           ))}
-        </FadeInStagger>
+        </FadeInStagger> */}
       </Container>
     </>
   )
