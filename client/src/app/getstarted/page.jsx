@@ -100,16 +100,44 @@ function GetStartedForm() {
               </div>
             </fieldset>
           </div>
-          <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
-            <SelectInput
-              label="Height"
+          <div className="border border-neutral-300 px-6 py-8 text-neutral-50 first:rounded-t-2xl last:rounded-b-2xl">
+            <select
               name="height"
-              options={[
-                { label: 'Meters', value: 'metric' },
-                { label: 'Feet and Inches', value: 'imperial' },
-              ]}
-              // onChange={handleHeightUnitChange}
-            />
+              className="form-control isolate mt-6 -space-y-px rounded-2xl bg-white/20"
+              id="height"
+              style={{ width: '100px' }}
+            >
+              <option value="55">4ft 7in</option>
+              <option value="56">4ft 8in</option>
+              <option value="57">4ft 9in</option>
+              <option value="58">4ft 10in</option>
+              <option value="59">4ft 11in</option>
+              <option value="60">5ft 0in</option>
+              <option value="61">5ft 1in</option>
+              <option value="62">5ft 2in</option>
+              <option value="63">5ft 3in</option>
+              <option value="64">5ft 4in</option>
+              <option value="65">5ft 5in</option>
+              <option value="66">5ft 6in</option>
+              <option value="67">5ft 7in</option>
+              <option value="68">5ft 8in</option>
+              <option value="69">5ft 9in</option>
+              <option value="70">5ft 10in</option>
+              <option value="71">5ft 11in</option>
+              <option value="72">6ft 0in</option>
+              <option value="73">6ft 1in</option>
+              <option value="74">6ft 2in</option>
+              <option value="75">6ft 3in</option>
+              <option value="76">6ft 4in</option>
+              <option value="77">6ft 5in</option>
+              <option value="78">6ft 6in</option>
+              <option value="79">6ft 7in</option>
+              <option value="80">6ft 8in</option>
+              <option value="81">6ft 9in</option>
+              <option value="82">6ft 10in</option>
+              <option value="83">6ft 11in</option>
+              <option value="84">7ft 0in</option>
+            </select>
           </div>
 
           <TextInput label="Age" type="age" name="age" autoComplete="age" />
