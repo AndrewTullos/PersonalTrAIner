@@ -15,7 +15,7 @@ import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { GetStarted } from '@/components/GetStarted'
+import { GetStarted } from '@/components/GetStartedForm.client'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
 import { Logo, Logomark } from '@/components/Logo'
