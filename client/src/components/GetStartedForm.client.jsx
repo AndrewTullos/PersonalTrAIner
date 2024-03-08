@@ -1,5 +1,5 @@
 'use client'
-import { useId } from 'react'
+import { useId, useState } from 'react'
 import Link from 'next/link'
 
 import { Border } from '@/components/Border'
@@ -68,8 +68,39 @@ function SelectInput({ label, options, ...props }) {
 }
 
 function GetStartedForm() {
-  const handleFormSubmit = (event) => {
+  const [goals, setGoals] = useState('')
+  const [height, setHeight] = useState('')
+  const [age, setAge] = useState('')
+  const [gender, setGender] = useState('')
+
+  const handleFormSubmit = async (event) => {
     event.preventDefault()
+    const formData = {
+      goals,
+      height,
+      age,
+      gender,
+    }
+
+    try {
+      const response = await fetch('http://localhost:3001/submit-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error(`Error - $response.statusText`)
+      }
+
+      const result = await response.json()
+      console.log(result.message)
+    } catch (error) {
+      console.error('Failed to submit form', error)
+    }
+
     console.log('Form submitted!')
   }
 
@@ -79,34 +110,53 @@ function GetStartedForm() {
         <h2 className="font-display text-base font-semibold text-neutral-50">
           Fill out the form below
         </h2>
+        {/* Goal Input Selection */}
         <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/20">
-          {/* Goal Input Selection */}
-
           <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
             <fieldset label="Goals" name="goals" autoComplete="goals">
               <legend className="text-base/6 text-neutral-50">Goals</legend>
               <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label="Lose Fat" name="goals" value="25" />
-                <RadioInput label="Gain Muscle" name="goals" value="50" />
+                <RadioInput
+                  label="Lose Fat"
+                  name="goals"
+                  value="lose_fat"
+                  checked={goals === 'lose_fat'}
+                  onChange={(e) => setGoals(e.target.value)}
+                />
+                <RadioInput
+                  label="Gain Muscle"
+                  name="goals"
+                  value="gain_muscle"
+                  checked={goals === 'gain_muscle'}
+                  onChange={(e) => setGoals(e.target.value)}
+                />
                 <RadioInput
                   label="Body Recomposition"
                   name="goals"
-                  value="150"
+                  value="body_recomposition"
+                  checked={goals === 'body_recomposition'}
+                  onChange={(e) => setGoals(e.target.value)}
                 />
                 <RadioInput
                   label="Maintain Current Weight"
                   name="goals"
-                  value="100"
+                  value="maintain_current_weight"
+                  checked={goals === 'maintain_current_weight'}
+                  onChange={(e) => setGoals(e.target.value)}
                 />
               </div>
             </fieldset>
           </div>
+
           {/* Height Input */}
           <div className="border border-neutral-300 px-6 py-8 text-neutral-50 first:rounded-t-2xl last:rounded-b-2xl">
+            <legend className="text-base/6 text-neutral-50">Height</legend>
             <select
               name="height"
+              value={height}
               className="form-control isolate mt-6 -space-y-px rounded-2xl bg-white/20"
               id="height"
+              onChange={(e) => setHeight(e.target.value)}
               style={{ width: '150px' }}
             >
               <option value="55">4ft 7in</option>
@@ -141,18 +191,42 @@ function GetStartedForm() {
               <option value="84">7ft 0in</option>
             </select>
           </div>
+
           {/* Age Input */}
-          <TextInput label="Age" type="number" name="age" autoComplete="age" />
+          <TextInput
+            label="Age"
+            type="number"
+            name="age"
+            value={age}
+            autoComplete="age"
+            onChange={(e) => setAge(e.target.value)}
+          />
+
+          {/* Gender Input */}
           <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
             <fieldset label="Gender" name="gender" autoComplete="gender">
               <legend className="text-base/6 text-neutral-50">Gender</legend>
               <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label="Male" name="goals" value="25" />
-                <RadioInput label="Female" name="goals" value="50" />
+                <RadioInput
+                  label="Male"
+                  name="gender"
+                  value="male"
+                  checked={gender === 'male'}
+                  onChange={(e) => setGender(e.target.value)}
+                />
+                <RadioInput
+                  label="Female"
+                  name="gender"
+                  value="female"
+                  checked={gender === 'female'}
+                  onChange={(e) => setGender(e.target.value)}
+                />
                 <RadioInput
                   label="Prefer Not to Answer"
-                  name="goals"
-                  value="150"
+                  name="gender"
+                  value="prefer_not_to_answer"
+                  checked={gender === 'prefer_not_to_answer'}
+                  onChange={(e) => setGender(e.target.value)}
                 />
               </div>
             </fieldset>
