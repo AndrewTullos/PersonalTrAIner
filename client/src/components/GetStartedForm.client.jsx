@@ -101,7 +101,7 @@ function GetStartedForm() {
       console.error('Failed to submit form', error)
     }
 
-    console.log('Form submitted!')
+    // console.log('Form submitted!')
   }
 
   return (
