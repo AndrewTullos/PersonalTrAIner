@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
+const fs = require("fs");
 const OpenAI = require("openai").default;
+const pdfService = require("./service/pdf-service");
 
 require("dotenv").config({ path: ".env.local" });
 
@@ -22,6 +24,7 @@ app.post("/submit-form", async (req, res) => {
 	const formData = { goals, height, age, gender };
 	console.log(formData);
 
+	// Creates the custom workout call to OpenAI
 	const response = await openai.chat.completions.create({
 		model: "gpt-3.5-turbo",
 		messages: [
@@ -47,7 +50,23 @@ app.post("/submit-form", async (req, res) => {
 	});
 	console.log("OpenAI Object", response);
 
+	// Form response
 	console.log("OpenAI Response:", response.choices[0].message.content);
+
+	// Generate Form into a PDF
+	const stream = fs.createWriteStream("TrAIner-workout.pdf");
+
+	pdfService.buildPDF(response.choices[0].message.content, stream);
+
+	stream.on("finish", () => {
+		res.setHeader("Content-Type", "application/pdf");
+		res.setHeader(
+			"Content-Disposition",
+			"attachment;filename=TrAIner-workout.pdf"
+		);
+
+		fs.createReadStream("TrAIner-workout.pdf").pipe(res);
+	});
 });
 
 app.listen(PORT, () => {

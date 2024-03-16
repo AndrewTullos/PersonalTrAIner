@@ -95,13 +95,16 @@ function GetStartedForm() {
         throw new Error(`Error - $response.statusText`)
       }
 
-      const result = await response.json()
-      console.log(result.message)
+      const contentType = response.headers.get('Content-Type')
+      if (contentType && contentType.includes('application/pdf')) {
+        window.location.href = response.url
+      } else {
+        const result = await response.json()
+        console.log(result.message)
+      }
     } catch (error) {
       console.error('Failed to submit form', error)
     }
-
-    // console.log('Form submitted!')
   }
 
   return (
