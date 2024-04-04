@@ -32,7 +32,7 @@ function Section({ title, image, children }) {
               className="font-display text-base font-semibold before:text-neutral-300 before:content-['/_'] after:text-neutral-950 after:content-[counter(section,decimal-leading-zero)]"
               aria-hidden="true"
             />
-            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
+            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-50 sm:text-4xl">
               {title}
             </h2>
             <div className="mt-6">{children}</div>
@@ -46,26 +46,28 @@ function Section({ title, image, children }) {
 function Discover() {
   return (
     <Section title="Discover" image={{ src: imageWhiteboard }}>
-      <div className="space-y-6 text-base text-neutral-600">
+      <div className="space-y-6 text-base text-neutral-200">
         <p>
           We work closely with our clients to understand their{' '}
-          <strong className="font-semibold text-neutral-950">needs</strong> and
+          <strong className="font-semibold text-neutral-50">needs</strong> and
           goals, embedding ourselves in their every day operations to understand
-          what makes their business tick.
+          what makes their body's tick.
         </p>
         <p>
-          Our team of private investigators shadow the company director’s for
-          several weeks while our account managers focus on going through their
-          trash. Our senior security experts then perform social engineering
-          hacks to gain access to their{' '}
-          <strong className="font-semibold text-neutral-950">business</strong>{' '}
-          accounts — handing that information over to our forensic accounting
-          team.
+          Our team of private investigators shadow our clients for several weeks
+          while our account managers focus on going through their trash. Our
+          senior security experts then perform social engineering hacks to gain
+          access to their{' '}
+          <strong className="font-semibold text-blue-500">credit cards</strong>{' '}
+          and <strong className="font-semibold text-blue-500">facebook</strong>{' '}
+          accounts — handing that information over to our off shore Swiss bank.
         </p>
         <p>
-          Once the full audit is complete, we report back with a comprehensive{' '}
-          <strong className="font-semibold text-neutral-950">plan</strong> and,
-          more importantly, a budget.
+          Once the full siphon of your life savings, we change our number to the
+          worst reviewed{' '}
+          <strong className="font-semibold text-blue-500">Applebee's</strong> in
+          your tristate area and, more importantly, we become{' '}
+          <strong className="font-semibold text-red-500">unreachable</strong> .
         </p>
       </div>
 
@@ -74,10 +76,10 @@ function Discover() {
       </h3>
       <TagList className="mt-4">
         <TagListItem>In-depth questionnaires</TagListItem>
-        <TagListItem>Feasibility studies</TagListItem>
+        <TagListItem>Advanced Animal Studies</TagListItem>
         <TagListItem>Blood samples</TagListItem>
-        <TagListItem>Employee surveys</TagListItem>
-        <TagListItem>Proofs-of-concept</TagListItem>
+        <TagListItem>No Employee surveys</TagListItem>
+        <TagListItem>AppleBee's</TagListItem>
         <TagListItem>Forensic audit</TagListItem>
       </TagList>
     </Section>
@@ -87,30 +89,21 @@ function Discover() {
 function Build() {
   return (
     <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
-      <div className="space-y-6 text-base text-neutral-600">
+      <div className="space-y-6 text-base text-neutral-200">
+        <p>Based off whatever ChatGPT writes for us, we package it in a PDF.</p>
         <p>
-          Based off of the discovery phase, we develop a comprehensive roadmap
-          for each product and start working towards delivery. The roadmap is an
-          intricately tangled mess of technical nonsense designed to drag the
-          project out as long as possible.
+          Each client then downloads the PDF, database??? No thank you, I don't
+          have that kind of money.
         </p>
         <p>
-          Each client is assigned a key account manager to keep lines of
-          communication open and obscure the actual progress of the project.
-          They act as a buffer between the client’s incessant nagging and the
-          development team who are hard at work scouring open source projects
-          for code to re-purpose.
-        </p>
-        <p>
-          Our account managers are trained to only reply to client emails after
-          9pm, several days after the initial email. This reinforces the general
-          aura that we are very busy and dissuades clients from asking for
-          changes.
+          Got a question about the app, me too! But life is like a box of
+          chocolates any way. And you're on a dieting website so don't eat
+          chocolate.
         </p>
       </div>
 
       <Blockquote
-        author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }}
+        author={{ name: 'Andrew T.', role: 'CEO of trAIner' }}
         className="mt-12"
       >
         trAIner automate your health.
@@ -122,51 +115,46 @@ function Build() {
 function Deliver() {
   return (
     <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
-      <div className="space-y-6 text-base text-neutral-600">
+      <div className="space-y-6 text-base text-neutral-200">
         <p>
           About halfway through the Build phase, we push each project out by 6
           weeks due to a change in{' '}
-          <strong className="font-semibold text-neutral-950">
-            requirements
-          </strong>
-          . This allows us to increase the budget a final time before launch.
+          <strong className="font-semibold text-blue-500">requirements</strong>.
+          This allows us to increase the budget a final time before launch.
         </p>
         <p>
           Despite largely using pre-built components, most of the{' '}
-          <strong className="font-semibold text-neutral-950">progress</strong>{' '}
-          on each project takes place in the final 24 hours. The development
-          time allocated to each client is actually spent making augmented
-          reality demos that go viral on social media.
+          <strong className="font-semibold text-blue-500">progress</strong> on
+          each project takes place in the final 24 hours. The development time
+          allocated to each client is actually spent making augmented reality
+          demos that go viral on social media.
         </p>
         <p>
           We ensure that the main pages of the site are{' '}
-          <strong className="font-semibold text-neutral-950">
+          <strong className="font-semibold text-blue-500">
             fully functional
           </strong>{' '}
           at launch — the auxiliary pages will, of course, be lorem ipusm shells
           which get updated as part of our exorbitant{' '}
-          <strong className="font-semibold text-neutral-950">
-            maintenance
-          </strong>{' '}
+          <strong className="font-semibold text-blue-500">maintenance</strong>{' '}
           retainer.
         </p>
       </div>
 
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+      <h3 className="mt-12 font-display text-base font-semibold text-neutral-50">
         Included in this phase
       </h3>
       <List className="mt-8">
         <ListItem title="Testing">
           Our projects always have 100% test coverage, which would be impressive
-          if our tests weren’t as porous as a sieve.
+          but I'm lying to you.
         </ListItem>
         <ListItem title="Infrastructure">
-          To ensure reliability we only use the best Digital Ocean droplets that
-          $4 a month can buy.
+          To ensure reliability we only use the best API calls to ChatGPT
         </ListItem>
         <ListItem title="Support">
-          Because we hold the API keys for every critical service your business
-          uses, you can expect a lifetime of support, and invoices, from us.
+          Did I mention I am making this all up? Impressive you're still
+          reading!
         </ListItem>
       </List>
     </Section>
@@ -189,26 +177,24 @@ function Values() {
       >
         <p>
           We strive to stay at the forefront of emerging trends and
-          technologies, while completely ignoring them and forking that old
-          Rails project we feel comfortable using. We stand by our core values
-          to justify that decision.
+          technologies, while completely ignoring them and opting to half ass
+          python tutorials.
         </p>
       </SectionIntro>
 
       <Container className="mt-24">
         <GridList>
           <GridListItem title="Meticulous">
-            The first part of any partnership is getting our designer to put
-            your logo in our template. The second step is getting them to do the
-            colors.
+            The first part of any partnership is getting you to fill out the
+            form. The second part is trick you into giving me your credit card.
           </GridListItem>
           <GridListItem title="Efficient">
             We pride ourselves on never missing a deadline which is easy because
-            most of the work was done years ago.
+            we don't have deadlines.
           </GridListItem>
           <GridListItem title="Adaptable">
-            Every business has unique needs and our greatest challenge is
-            shoe-horning those needs into something we already built.
+            Every business has unique needs and our greatest challenge is is
+            actually showing up to work.
           </GridListItem>
           <GridListItem title="Honest">
             We are transparent about all of our processes, banking on the simple
@@ -240,8 +226,8 @@ export default function Process() {
       <PageIntro eyebrow="Our process" title="How we work">
         <p>
           We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          best value to our clients. Basically, we do nothing and leverage Sam
+          Altman and his team of developers do all the heavy lifting.
         </p>
       </PageIntro>
 

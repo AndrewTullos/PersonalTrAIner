@@ -1,5 +1,5 @@
 .typography {
-  color: theme(colors.neutral.950);
+  color: theme(colors.neutral.100);
   font-size: theme(fontSize.xl);
   line-height: theme(fontSize.xl[1].lineHeight);
 

@@ -24,12 +24,21 @@ function CaseStudies({ caseStudies }) {
   return (
     <Container className="mt-40">
       <FadeIn>
-        <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          Case studies
+        <h2 className="font-display text-2xl font-semibold text-neutral-50">
+          Github
         </h2>
+        <p className="text-blue-500">
+          <a
+            href="https://github.com/AndrewTullos/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://github.com/AndrewTullos/
+          </a>
+        </p>
       </FadeIn>
       <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
-        {caseStudies.map((caseStudy) => (
+        {/* {caseStudies.map((caseStudy) => (
           <FadeIn key={caseStudy.client}>
             <article>
               <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
@@ -85,7 +94,7 @@ function CaseStudies({ caseStudies }) {
               </Border>
             </article>
           </FadeIn>
-        ))}
+        ))} */}
       </div>
     </Container>
   )
@@ -159,8 +168,7 @@ export default async function Work() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
       >
-        We approached <em>trAIner</em> because we loved their past work. They
-        delivered something remarkably similar in record time.
+        We approached <em>trAIner</em> by mistake. Not the worst app ever.
       </Testimonial>
 
       <Clients />

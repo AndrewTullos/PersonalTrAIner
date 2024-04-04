@@ -62,7 +62,7 @@ app.post("/submit-form", async (req, res) => {
 		res.setHeader("Content-Type", "application/pdf");
 		res.setHeader(
 			"Content-Disposition",
-			"attachment;filename=TrAIner-workout.pdf"
+			"inline; filename=TrAIner-workout.pdf"
 		);
 
 		fs.createReadStream("TrAIner-workout.pdf").pipe(res);

@@ -98,21 +98,11 @@ function GetStartedForm() {
 
       const contentType = response.headers.get('Content-Type')
       if (contentType && contentType.includes('application/pdf')) {
-        const blob = await response.blob()
-        const blobUrl = window.URL.createObjectURL(blob)
-        window.open(blobUrl, '_blank')
+        window.location.href = response.url
       } else {
         const result = await response.json()
         console.log(result.message)
       }
-      // Test area
-      // const contentType = response.headers.get('Content-Type')
-      // if (contentType && contentType.includes('application/pdf')) {
-      //   window.location.href = response.url
-      // } else {
-      //   const result = await response.json()
-      //   console.log(result.message)
-      // }
     } catch (error) {
       console.error('Failed to submit form', error)
     }
