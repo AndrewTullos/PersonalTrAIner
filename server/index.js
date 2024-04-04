@@ -15,6 +15,14 @@ const openai = new OpenAI({
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+	res.send("Home Page");
+});
+
+app.get("/about", (req, res) => {
+	res.send("About Page");
+});
+
 app.post("/submit-form", async (req, res) => {
 	const { goals, height, age, gender } = req.body;
 	const formData = { goals, height, age, gender };
