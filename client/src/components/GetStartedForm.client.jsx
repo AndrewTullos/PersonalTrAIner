@@ -84,7 +84,7 @@ function GetStartedForm() {
     }
 
     try {
-      const response = await fetch('http://localhost:3001/submit-form', {
+      const response = await fetch('${process.env.API_URL}/submit-form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
