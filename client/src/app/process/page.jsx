@@ -51,7 +51,7 @@ function Discover() {
           We work closely with our clients to understand their{' '}
           <strong className="font-semibold text-neutral-50">needs</strong> and
           goals, embedding ourselves in their every day operations to understand
-          what makes their body's tick.
+          what makes their body&apos;s tick.
         </p>
         <p>
           Our team of private investigators shadow our clients for several weeks
@@ -65,8 +65,10 @@ function Discover() {
         <p>
           Once the full siphon of your life savings, we change our number to the
           worst reviewed{' '}
-          <strong className="font-semibold text-blue-500">Applebee's</strong> in
-          your tristate area and, more importantly, we become{' '}
+          <strong className="font-semibold text-blue-500">
+            Applebee&apos;s
+          </strong>{' '}
+          in your tristate area and, more importantly, we become{' '}
           <strong className="font-semibold text-red-500">unreachable</strong> .
         </p>
       </div>
@@ -79,7 +81,7 @@ function Discover() {
         <TagListItem>Advanced Animal Studies</TagListItem>
         <TagListItem>Blood samples</TagListItem>
         <TagListItem>No Employee surveys</TagListItem>
-        <TagListItem>AppleBee's</TagListItem>
+        <TagListItem>AppleBee&apos;s</TagListItem>
         <TagListItem>Forensic audit</TagListItem>
       </TagList>
     </Section>
@@ -97,7 +99,7 @@ function Build() {
         </p>
         <p>
           Got a question about the app, me too! But life is like a box of
-          chocolates any way. And you're on a dieting website so don't eat
+          chocolates any way. And you're on a dieting website so don&apos;t eat
           chocolate.
         </p>
       </div>
