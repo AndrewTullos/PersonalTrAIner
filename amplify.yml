@@ -13,14 +13,14 @@ applications:
         baseDirectory: .next
         files:
           - "**/*"
-  - backend:
-      phases:
-        build:
-          commands:
-            - cd server
-            - npm install
-            - echo "No build step required for Node.js backend"
-      artifacts:
-        baseDirectory: server
-        files:
-          - "**/*"
+  # - backend:
+  #     phases:
+  #       build:
+  #         commands:
+  #           - cd server
+  #           - npm install
+  #           - echo "No build step required for Node.js backend"
+  #     artifacts:
+  #       baseDirectory: server
+  #       files:
+  #         - "**/*"
