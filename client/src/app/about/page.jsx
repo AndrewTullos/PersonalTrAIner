@@ -141,11 +141,11 @@ export default async function About() {
             cost.
           </p>
           <p>
-            At trAIner, our team is not just a workforce; we're a tight-knit
-            community dedicated to supporting one another. While we offer
-            competitive compensation, we value dedication and encourage our team
-            members to fully immerse themselves in their work, fostering an
-            environment of collaboration and growth
+            At trAIner, our team is not just a workforce; we&apos;re a
+            tight-knit community dedicated to supporting one another. While we
+            offer competitive compensation, we value dedication and encourage
+            our team members to fully immerse themselves in their work,
+            fostering an environment of collaboration and growth
           </p>
         </div>
       </PageIntro>

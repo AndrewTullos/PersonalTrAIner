@@ -99,8 +99,8 @@ function Build() {
         </p>
         <p>
           Got a question about the app, me too! But life is like a box of
-          chocolates any way. And you're on a dieting website so don&apos;t eat
-          chocolate.
+          chocolates any way. And you&apos;re on a dieting website so don&apos;t
+          eat chocolate.
         </p>
       </div>
 
@@ -155,7 +155,7 @@ function Deliver() {
           To ensure reliability we only use the best API calls to ChatGPT
         </ListItem>
         <ListItem title="Support">
-          Did I mention I am making this all up? Impressive you're still
+          Did I mention I am making this all up? Impressive you&apos;re still
           reading!
         </ListItem>
       </List>

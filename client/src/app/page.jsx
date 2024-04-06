@@ -69,8 +69,8 @@ function CaseStudies({ caseStudies }) {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
+          We believe technology is the answer to the world&apos;s greatest
+          challenges. It&apos;s also the cause, so we find ourselves in bit of a
           catch 22 situation.
         </p>
       </SectionIntro>
@@ -80,7 +80,7 @@ function CaseStudies({ caseStudies }) {
             <p className="mt-6 font-display text-2xl font-semibold ">
               <h3>Step One</h3>
             </p>
-            <p className="mt-4 text-base">Click on the "Get Started</p>
+            <p className="mt-4 text-base">Click on "Get Started"</p>
           </article>
 
           <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 hover:text-neutral-800 sm:p-8">
@@ -160,9 +160,9 @@ function Services() {
             <ListItem title="Workout Programs">
               With TrAIner, users can access custom workout programs designed to
               maximize their fitness results and optimize their training
-              sessions. Whether you're a beginner or a seasoned athlete, TrAIner
-              ensures every workout is tailored to your fitness level and
-              objectives
+              sessions. Whether you&apos;re a beginner or a seasoned athlete,
+              TrAIner ensures every workout is tailored to your fitness level
+              and objectives
             </ListItem>
             <ListItem title="Skilled Engineering">
               We boast a team of proficient developers well-versed in
