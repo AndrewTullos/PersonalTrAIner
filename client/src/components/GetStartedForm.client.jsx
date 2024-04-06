@@ -106,6 +106,7 @@ function GetStartedForm() {
         window.open(blobUrl, '_blank')
       } else {
         const result = await response.json()
+        console.log(result)
         console.log(result.message)
       }
       // Test area
