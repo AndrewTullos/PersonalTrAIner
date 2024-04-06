@@ -66,7 +66,8 @@ function CaseStudies({ caseStudies }) {
     <>
       <SectionIntro
         title="Harnessing technology for a brighter future"
-        className="mt-24 sm:mt-32 lg:mt-40 "
+        className="mt-24 rounded-4xl bg-neutral-900/50 py-20 sm:mt-32 sm:py-32 lg:mt-56"
+        // className="mt-24 sm:mt-32 lg:mt-40 rounded-4xl bg-neutral-900/50"
       >
         <p>
           We believe technology is the answer to the world&apos;s greatest
