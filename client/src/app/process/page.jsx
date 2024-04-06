@@ -94,8 +94,8 @@ function Build() {
       <div className="space-y-6 text-base text-neutral-200">
         <p>Based off whatever ChatGPT writes for us, we package it in a PDF.</p>
         <p>
-          Each client then downloads the PDF, database??? No thank you, I don't
-          have that kind of money.
+          Each client then downloads the PDF, database??? No thank you, I
+          don&apos;t have that kind of money.
         </p>
         <p>
           Got a question about the app, me too! But life is like a box of
@@ -149,7 +149,7 @@ function Deliver() {
       <List className="mt-8">
         <ListItem title="Testing">
           Our projects always have 100% test coverage, which would be impressive
-          but I'm lying to you.
+          but I&apos;m lying to you.
         </ListItem>
         <ListItem title="Infrastructure">
           To ensure reliability we only use the best API calls to ChatGPT
@@ -192,7 +192,7 @@ function Values() {
           </GridListItem>
           <GridListItem title="Efficient">
             We pride ourselves on never missing a deadline which is easy because
-            we don't have deadlines.
+            we don&apos;t have deadlines.
           </GridListItem>
           <GridListItem title="Adaptable">
             Every business has unique needs and our greatest challenge is is
