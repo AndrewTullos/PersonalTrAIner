@@ -7,8 +7,7 @@
 		"start-server": "cd server && npm start",
 		"start-client": "cd client && npm run dev",
 		"dev": "concurrently \"npm run start-server\" \"npm run start-client\"",
-		"build": "cd client && npm run build",
-		"export": "next export"
+		"build": "cd client && npm run build"
 	},
 	"dependencies": {
 		"dotenv": "^16.4.5",
