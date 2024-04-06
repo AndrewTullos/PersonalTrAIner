@@ -84,13 +84,16 @@ function GetStartedForm() {
     }
 
     try {
-      const response = await fetch('${process.env.API_URL}/submit-form', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      const response = await fetch(
+        'https://kystx3pz2m.execute-api.us-west-1.amazonaws.com/prod',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
         },
-        body: JSON.stringify(formData),
-      })
+      )
 
       if (!response.ok) {
         throw new Error(`Error - $response.statusText`)

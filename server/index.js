@@ -1,32 +1,38 @@
-const express = require("express");
-const cors = require("cors");
+const AWS = require("aws-sdk");
+// const express = require("express");
+// const cors = require("cors");
 const fs = require("fs");
 const OpenAI = require("openai").default;
 const pdfService = require("./service/pdf-service");
 
-require("dotenv").config({ path: ".env.local" });
+// require("dotenv").config({ path: ".env.local" });
 
-const app = express();
-const PORT = process.env.PORT || 3001;
+// const app = express();
+// const PORT = process.env.PORT || 3001;
 const openai = new OpenAI({
 	apiKey: process.env.OPENAI_API_KEY,
 });
 
-app.use(cors());
-app.use(express.json());
+// app.use(cors());
 
-app.get("/", (req, res) => {
-	res.send("Home Page");
-});
+// app.use(express.json());
 
-app.get("/about", (req, res) => {
-	res.send("About Page");
-});
+// app.get("/", (req, res) => {
+// 	res.send("Home Page");
+// });
 
-app.post("/submit-form", async (req, res) => {
-	const { goals, height, age, gender } = req.body;
-	const formData = { goals, height, age, gender };
-	console.log(formData);
+// app.get("/about", (req, res) => {
+// 	res.send("About Page");
+// });
+
+// app.post("/submit-form", async (req, res) => {
+// 	const { goals, height, age, gender } = req.body;
+// 	const formData = { goals, height, age, gender };
+// 	console.log(formData);
+
+exports.handler = async (event) => {
+	const requestBody = JSON.parse(event.body);
+	const { goals, height, age, gender } = requestBody;
 
 	// Creates the custom workout call to OpenAI
 	const response = await openai.chat.completions.create({
@@ -34,7 +40,7 @@ app.post("/submit-form", async (req, res) => {
 		messages: [
 			{
 				role: "system",
-				content: "You are a online personal trainer",
+				content: "You are an online personal trainer",
 			},
 			{
 				role: "user",
@@ -52,27 +58,40 @@ app.post("/submit-form", async (req, res) => {
 		frequency_penalty: 0,
 		presence_penalty: 0,
 	});
-	console.log("OpenAI Object", response);
+	// console.log("OpenAI Object", response);
 
 	// Form response
-	console.log("OpenAI Response:", response.choices[0].message.content);
+	// console.log("OpenAI Response:", response.choices[0].message.content);
 
 	// Generate Form into a PDF
-	const stream = fs.createWriteStream("TrAIner-workout.pdf");
+	const pdfPath = "/tmp/TrAIner-workout.pdf";
+	await pdfService.buildPDF(response.choices[0].message.content, pdfPath);
+	// const stream = fs.createWriteStream("TrAIner-workout.pdf");
+	// pdfService.buildPDF(response.choices[0].message.content, stream);
 
-	pdfService.buildPDF(response.choices[0].message.content, stream);
+	const pdfContent = fs.readFileSync(pdfPath);
+	const base64Pdf = pdfContent.toString("base64");
 
-	stream.on("finish", () => {
-		res.setHeader("Content-Type", "application/pdf");
-		res.setHeader(
-			"Content-Disposition",
-			"inline; filename=TrAIner-workout.pdf"
-		);
+	return {
+		statusCode: 200,
+		headers: {
+			"Content-Type": "application/pdf",
+			"Content-Disposition": "attachment; filename=TrAIner-workout.pdf",
+		},
+		body: base64Pdf,
+		isBase64Encoded: true,
+	};
+	// stream.on("finish", () => {
+	// 	res.setHeader("Content-Type", "application/pdf");
+	// 	res.setHeader(
+	// 		"Content-Disposition",
+	// 		"inline; filename=TrAIner-workout.pdf"
+	// 	);
 
-		fs.createReadStream("TrAIner-workout.pdf").pipe(res);
-	});
-});
+	// 	fs.createReadStream("TrAIner-workout.pdf").pipe(res);
+	// });
+};
 
-app.listen(PORT, () => {
-	console.log(`Server is running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+// 	console.log(`Server is running on port ${PORT}`);
+// });
