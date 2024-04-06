@@ -1,0 +1,26 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd client
+            - npm install
+        build:
+          commands:
+            - npm run build
+      artifacts:
+        baseDirectory: client/build
+        files:
+          - "**/*"
+  - backend:
+      phases:
+        build:
+          commands:
+            - cd server
+            - npm install
+            - echo "No build step required for Node.js backend"
+      artifacts:
+        baseDirectory: server
+        files:
+          - "**/*"
