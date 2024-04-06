@@ -9,7 +9,6 @@ applications:
         build:
           commands:
             - npm run build
-            - npm run export
       artifacts:
         baseDirectory: out
         files:
