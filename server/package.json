@@ -4,7 +4,9 @@
 	"description": "Server for my application",
 	"main": "index.js",
 	"scripts": {
-		"start": "node index.js"
+		"start": "node index.js",
+		"dev": "node index.js",
+		"build": "echo 'No build step required for pure Node.js app'"
 	},
 	"dependencies": {
 		"blob-stream": "^0.1.3",
