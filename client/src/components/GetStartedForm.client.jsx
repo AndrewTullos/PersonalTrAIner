@@ -85,7 +85,7 @@ function GetStartedForm() {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/submit-form`,
+        `https://kystx3pz2m.execute-api.us-west-1.amazonaws.com/prod/submit-form`,
         {
           method: 'POST',
           headers: {
