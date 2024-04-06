@@ -10,7 +10,7 @@ applications:
           commands:
             - npm run build
       artifacts:
-        baseDirectory: client/build
+        baseDirectory: client/out
         files:
           - "**/*"
   - backend:
