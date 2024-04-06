@@ -74,7 +74,7 @@ function CaseStudies({ caseStudies }) {
           catch 22 situation.
         </p>
       </SectionIntro>
-      <Container className="mt-16 bg-neutral-900/20">
+      <Container className="mt-16 rounded-4xl bg-neutral-900/20">
         <FadeInStagger className="grid grid-cols-1 gap-8 text-neutral-200 lg:grid-cols-3">
           <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 hover:text-neutral-800 sm:p-8">
             <p className="mt-6 font-display text-2xl font-semibold ">
