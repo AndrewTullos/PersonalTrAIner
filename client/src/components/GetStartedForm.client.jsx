@@ -84,16 +84,13 @@ function GetStartedForm() {
     }
 
     try {
-      const response = await fetch(
-        `https://u9klvlnbz6.execute-api.us-west-1.amazonaws.com/prod/submit-form`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
+      const response = await fetch(`http://localhost:3001/submit-form`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-      )
+        body: JSON.stringify(formData),
+      })
 
       if (!response.ok) {
         throw new Error(`Error - $response.statusText`)
@@ -109,14 +106,6 @@ function GetStartedForm() {
         console.log(result)
         console.log(result.message)
       }
-      // Test area
-      // const contentType = response.headers.get('Content-Type')
-      // if (contentType && contentType.includes('application/pdf')) {
-      //   window.location.href = response.url
-      // } else {
-      //   const result = await response.json()
-      //   console.log(result.message)
-      // }
     } catch (error) {
       console.error('Failed to submit form', error)
     }
